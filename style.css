@@ -11,3 +11,47 @@ h1{
     padding: 20px;
     margin: none;
 }
+#SpacePeople{
+    color: lightblue;
+}
+p{
+    color: white;
+    text-align: center;
+}
+li{
+    list-style-type: none;
+    color: lightblue;
+    font-weight: 600;
+}
+li:before{
+    content: "\2605       ";
+    color: lightblue;
+}
+.people{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.astronaut{
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 90%;
+    height: auto;
+    margin-left: 75px;
+}
+.people.names{
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+}
+.iss{
+    width: 85%;
+    height: auto;
+    padding-top: 25px;
+    padding-left: 50px;
+}
+.location p{
+    color: white;
+    font-weight: 600;
+}
+i{
+    font-weight: 500;
+}
