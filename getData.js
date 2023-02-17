@@ -1,13 +1,4 @@
 
-$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
-    var number = data['number'];
-    $('#SpacePeople').html(number);
-
-    data['people'].forEach(function (d) {
-        $('#astroNames').append('<li>' + d['name'] + '   <i>(' + d['craft'] + ')</i>' + '</li>');
-    });
-});
-
 function getISS () {
     $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
         var lat = data['iss_position']['latitude'];
@@ -19,3 +10,12 @@ function getISS () {
 }
 
 getISS();
+
+$.getJSON('http://api.open-notify.org/astros.json?callback=?', function(data) {
+    var number = data['number'];
+    $('#SpacePeople').html(number);
+
+    data['people'].forEach(function (d) {
+        $('#astroNames').append('<li>' + d['name'] + '   <i>(' + d['craft'] + ')</i>' + '</li>');
+    });
+});
